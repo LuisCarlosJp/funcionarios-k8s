@@ -6,5 +6,5 @@ spec:
   selector:
     app: funcionariosapp
   ports:
-  - port: 8080
+  - port: 8008
     targetPort: 8080
