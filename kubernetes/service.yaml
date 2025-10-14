@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: service
+metadata:
+  name: funcionariosapp
+spec:
+  selector:
+    app: funcionariosapp
+  ports:
+  - port: 8080
+    targetPort: 8080

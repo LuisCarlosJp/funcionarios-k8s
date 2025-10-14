@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+    name: funcionariosapp
+spec:
+  selector:
+    matchLabels:
+        app: funcionariosapp
+  template:
+    metadata:
+      labels:
+          app: funcionariosapp
+    spec:
+      containers:
+        - name: funcionariosapp
+          image: imagem
+          ports:
+            - containerPort: 8080

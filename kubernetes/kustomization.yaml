@@ -1,0 +1,12 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+  - deploy.yaml
+  - service.yaml
+
+namespace: funcionariosapp
+
+images:
+  - name: imagem
+    newName: amakusashirou/funcionarios
+    newTag: 42d3bad
