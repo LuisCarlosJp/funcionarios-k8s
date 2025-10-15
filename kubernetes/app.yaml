@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: spring-app
-          image: amakusashirou/funcionarios:42d3bad
+          image: imagem
           ports:
             - containerPort: 8080
           env:
