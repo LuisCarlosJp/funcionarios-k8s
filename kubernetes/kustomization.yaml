@@ -9,4 +9,4 @@ namespace: funcionariosapp
 images:
 - name: imagem
   newName: amakusashirou/funcionarios
-  newTag: 4df06f2
+  newTag: 070dbb3
