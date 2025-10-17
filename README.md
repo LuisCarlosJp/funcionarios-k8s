@@ -21,13 +21,12 @@ O gerenciamento de versões é feito com **Kustomize**, e o deploy contínuo é 
 
 Antes de iniciar, é necessário ter instalado localmente:
 
-| Ferramenta | Função | Versão recomendada |
-|-------------|---------|--------------------|
-| [Docker](https://www.docker.com/) | Criação de containers | 24+ |
-| [Kind](https://kind.sigs.k8s.io/) | Cluster Kubernetes local | 0.23+ |
-| [kubectl](https://kubernetes.io/docs/tasks/tools/) | CLI Kubernetes | 1.30+ |
-| [Kustomize](https://kubectl.docs.kubernetes.io/installation/kustomize/) | Gerenciador de manifestos | 5.0+ |
-| [ArgoCD](https://argo-cd.readthedocs.io/en/stable/) | Deploy contínuo GitOps | 2.10+ |
+| Ferramenta | Função | 
+|-------------|---------|
+| [Docker](https://www.docker.com/) | Criação de containers |
+| [Kind](https://kind.sigs.k8s.io/) | Cluster Kubernetes local | 
+| [kubectl](https://kubernetes.io/docs/tasks/tools/) | CLI Kubernetes |
+| [Kustomize](https://kubectl.docs.kubernetes.io/installation/kustomize/) | Gerenciador de manifestos |
 
 ---
 
