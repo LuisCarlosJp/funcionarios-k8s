@@ -75,7 +75,10 @@ Obtenha a senha inicial:
 ```bash
 kubectl -n argocd get secret argocd-initial-admin-secret   -o jsonpath="{.data.password}" | base64 -d && echo
 ```
-
+ou instalando [argo cli](https://argo-cd.readthedocs.io/en/stable/cli_installation/) e usando comando abaixo:
+```bash
+argocd admin initial-password -n argocd
+```
 Usuário: `admin`
 
 ---
@@ -126,9 +129,13 @@ kubectl apply -k kubernetes/
 kubectl get pods -n funcionariosapp
 kubectl get svc -n funcionariosapp
 ```
+### 🚀 Acessar a aplicação
 
-A aplicação estará exposta na porta **NodePort 8080** do cluster.
+A aplicação pode ser acessada localmente utilizando o comando abaixo para realizar o port-forward do serviço `spring-app`:
 
+```bash
+kubectl port-forward svc/spring-app 8080:8080 --address=0.0.0.0
+```
 ---
 
 ## 🧹 Comandos úteis
@@ -142,8 +149,3 @@ A aplicação estará exposta na porta **NodePort 8080** do cluster.
 | Expor ArgoCD | `kubectl port-forward svc/argocd-server -n argocd 8080:443` |
 
 ---
-
-## 📘 Licença
-
-Este projeto está sob a licença MIT.  
-Sinta-se à vontade para usar, adaptar e contribuir.
