@@ -9,9 +9,9 @@ O gerenciamento de versões é feito com **Kustomize**, e o deploy contínuo é 
 
 ```
 .
-├── app.yaml             # Deployment + Service da aplicação Spring Boot
-├── database.yaml        # Deployment + Service + PVC do PostgreSQL
 └── kubernetes/
+    └── app.yaml            # Deployment + Service da aplicação Spring Boot
+    └── database.yaml       # Deployment + Service + PVC do PostgreSQL
     └── kustomization.yaml  # Controla o build com Kustomize
 ```
 
