@@ -8,7 +8,7 @@ O gerenciamento de versões é feito com **Kustomize**, e o deploy contínuo é 
 ## 🧩 Estrutura do Repositório
 
 ```
-.
+└── kind-config.yaml
 └── kubernetes/
     └── app.yaml            # Deployment + Service da aplicação Spring Boot
     └── database.yaml       # Deployment + Service + PVC do PostgreSQL
@@ -35,13 +35,18 @@ Antes de iniciar, é necessário ter instalado localmente:
 ### 1️⃣ Criar o cluster Kubernetes com Kind
 
 ```bash
-kind create cluster --name funcionarios-cluster
+kind create cluster --name funcionarios-cluster --config kind-config.yaml
 ```
 
 Verifique o contexto:
 
 ```bash
 kubectl cluster-info --context kind-funcionarios-cluster
+```
+
+Crie o namespace para aplicação:
+```bash
+kubectl create namespace funcionariosapp
 ```
 
 ---
@@ -88,7 +93,7 @@ No painel do ArgoCD:
 - **NEW APP**
   - **Application Name:** funcionarios-app  
   - **Project:** default  
-  - **Repository URL:** `https://github.com/amakusashirou/funcionarios-k8s.git` *(exemplo)*  
+  - **Repository URL:** `https://github.com/amakusashirou/funcionarios-k8s` *(exemplo)*  
   - **Path:** `/kubernetes`  
   - **Cluster URL:** `https://kubernetes.default.svc`  
   - **Namespace:** `funcionariosapp`  
@@ -130,10 +135,10 @@ kubectl get svc -n funcionariosapp
 ```
 ### 🚀 Acessar a aplicação
 
-A aplicação pode ser acessada localmente utilizando o comando abaixo para realizar o port-forward do serviço `spring-app`:
+A aplicação pode ser acessada em:
 
-```bash
-kubectl port-forward svc/spring-app 8080:8080 --address=0.0.0.0
+👉 [https://localhost:32000](https://localhost:32000)
+
 ```
 ---
 
