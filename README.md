@@ -93,7 +93,7 @@ No painel do ArgoCD:
 - **NEW APP**
   - **Application Name:** funcionarios-app  
   - **Project:** default  
-  - **Repository URL:** `https://github.com/amakusashirou/funcionarios-k8s` *(exemplo)*  
+  - **Repository URL:** `https://github.com/LuisCarlosJp/funcionarios-k8s` *(exemplo)*  
   - **Path:** `/kubernetes`  
   - **Cluster URL:** `https://kubernetes.default.svc`  
   - **Namespace:** `funcionariosapp`  
